@@ -4,7 +4,13 @@
 The following are all form elements (add to them):<br>
 <form>
   
-  Enter Your First Name:<input type=text id="myText01" value="Thomas"><br>
+<form action="/action_page.php" method="post">
+  <input type="text" name="fname" required>
+  <input type="submit" value="Submit">
+</form>
+
+<p>If you click submit, without filling out the text field,
+your browser will display an error message.</p>
   Checkbox: <br>
   Beef:<input type=checkbox><br>
   Veggy:<input type=checkbox><br>
