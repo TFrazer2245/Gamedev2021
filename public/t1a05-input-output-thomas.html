@@ -40,4 +40,21 @@ squared = ' + myIn01*myIn01
      myIn02 + ' multiplied by ' + myIn03 + ' = ' + myIn02*myIn03
 }"><br>
 
-<div id="myDiv02">...</div>
+<div id="myDiv02">...</div><br><br>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var txt;
+  if (confirm("Press a button!")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+
