@@ -29,6 +29,21 @@ document.getElementById('myText01').value
 }"      onMouseOver="{
    document.getElementById('myB01').innerHTML = 'This is cool'
 }"    > This is bold</b>
+
+Press and hold down any key<br>
+
+<input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
+
+<script>
+function keydownFunction() {
+  document.getElementById("demo").style.backgroundColor = "red";
+}
+
+function keyupFunction() {
+  document.getElementById("demo").style.backgroundColor = "green";
+}
+</script>
+
      
      
 <br><br>
