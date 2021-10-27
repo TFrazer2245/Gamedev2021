@@ -24,13 +24,13 @@ document.getElementById('myText01').value
 
 <div id="myDiv01">...</div><br>
 
-<p id="demo">Double-click me.</p>
+<p id="myDemo01">Double-click me.</p>
 
 <script>
-document.getElementById("demo").addEventListener("dblclick", myFunction);
+document.getElementById("myDemo01").addEventListener("dblclick", myFunction);
 
 function myFunction() {
-  document.getElementById("demo").innerHTML = "I was double-clicked!";
+  document.getElementById("myDemo01").innerHTML = "I was double-clicked!";
 }
 </script><br>
 
@@ -44,15 +44,15 @@ function myFunction() {
 
 Press and hold down any key<br>
 
-<input type="text" id="demo" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
+<input type="text" id="myDemo02" onkeydown="keydownFunction()" onkeyup="keyupFunction()">
 
 <script>
 function keydownFunction() {
-  document.getElementById("demo").style.backgroundColor = "purple";
+  document.getElementById("myDemo02").style.backgroundColor = "purple";
 }
 
 function keyupFunction() {
-  document.getElementById("demo").style.backgroundColor = "orange";
+  document.getElementById("myDemo02").style.backgroundColor = "orange";
 }
 </script>
 
