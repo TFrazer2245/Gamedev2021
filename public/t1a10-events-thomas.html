@@ -56,7 +56,19 @@ function keyupFunction() {
 }
 </script>
 
-     
+     Enter your name in lower case: <input type="text" id="fname">
+
+
+
+<script>
+document.getElementById("fname").addEventListener("change", myFunction);
+
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
      
 <br><br>
      
