@@ -67,7 +67,7 @@ function myFunction() {
 }
 </script><br><br>
 
-Write something in the input field, and then click outside the field to lose focus. <br>
+Write something in the input field, and then click outside the field to lose focus(blur). <br>
 
 <input type="text" id="fname02">
 
@@ -79,7 +79,7 @@ function myFunction02() {
 }
 </script><br><br>
 
-Enter your name: <input type="text" id="fname03">
+Enter your name(focus): <input type="text" id="fname03">
 
 <script>
 document.getElementById("fname03").addEventListener("focus", myFunction03);
@@ -87,11 +87,29 @@ document.getElementById("fname03").addEventListener("focus", myFunction03);
 function myFunction03() {
   document.getElementById("fname03").style.backgroundColor = "red";
 }
-</script>
+</script><br><br>
 
+<form id="myForm">
+  <input type="text" id="myInput">
+</form>
 
+Click the box to change its colour and click outside of the box to remove the colour.(blur and focus)
+
+<script>
+var x = document.getElementById("myForm");
+x.addEventListener("focusin", myFocusFunction);
+x.addEventListener("focusout", myBlurFunction);
+
+function myFocusFunction() {
+  document.getElementById("myInput").style.backgroundColor = "yellow";
+}
+
+function myBlurFunction() {
+  document.getElementById("myInput").style.backgroundColor = "";  
+}
+</script><br><br>
      
-<br><br>
+
      
 You do at least 8 other events:<br>
 onClick, onDbClick, onChange, onBlue, onFocus, onMouseMove, onTouch,<br>
