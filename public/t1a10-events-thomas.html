@@ -67,6 +67,19 @@ function myFunction() {
 }
 </script>
 
+Write something in the input field, and then click outside the field to lose focus. <br>
+
+<input type="text" id="fname">
+
+<script>
+document.getElementById("fname").addEventListener("blur", myFunction);
+
+function myFunction() {
+  alert("Input field lost focus.");
+}
+</script>
+
+
      
 <br><br>
      
