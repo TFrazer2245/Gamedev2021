@@ -65,16 +65,16 @@ function myFunction() {
   var x = document.getElementById("fname");
   x.value = x.value.toUpperCase();
 }
-</script>
+</script><br><br>
 
 Write something in the input field, and then click outside the field to lose focus. <br>
 
-<input type="text" id="fname">
+<input type="text" id="fname02">
 
 <script>
-document.getElementById("fname").addEventListener("blur", myFunction);
+document.getElementById("fname02").addEventListener("blur", myFunction02);
 
-function myFunction() {
+function myFunction02() {
   alert("Input field lost focus.");
 }
 </script>
