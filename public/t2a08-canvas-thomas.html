@@ -19,10 +19,10 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 <input type=button value=".fillText('Hello World', 400, 100)" onclick="{
    myContext.font = '20px Arial';
-   myContext.fillText('Hello World', 400, 100);
+   myContext.fillText('This is cool', 400, 100);
    myContext.translate(400, 100);  
    myContext.rotate(60 * Math.PI / 180); 
-   myContext.fillText('Hello World', 10, 10);
+   myContext.fillText('This is cool', 10, 10);
    myContext.stroke();
    myContext.resetTransform();  
    //myContext.rotate(-60 * Math.PI / 180); 
@@ -39,9 +39,9 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 <input type=button value=".createLinearGradient(100, 300, 200, 600)" onclick="{
    let myGradient = myContext.createLinearGradient(100, 300, 200, 600);
-   myGradient.addColorStop(0, 'purple');
-   myGradient.addColorStop(2, 'blue');
-   myGradient.addColorStop(5, 'red');
+   myGradient.addColorStop(0.5, 'purple');
+   myGradient.addColorStop(1, 'blue');
+   myGradient.addColorStop(3, 'red');
    myContext.fillStyle = myGradient;
    myContext.fillRect(100, 300, 200, 600);
    // reset fillstyle
