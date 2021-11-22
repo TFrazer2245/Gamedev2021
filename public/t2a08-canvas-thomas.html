@@ -37,13 +37,13 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 
 
-<input type=button value=".createLinearGradient(100, 300, 200, 400)" onclick="{
-   let myGradient = myContext.createLinearGradient(100, 300, 200, 400);
+<input type=button value=".createLinearGradient(100, 300, 200, 600)" onclick="{
+   let myGradient = myContext.createLinearGradient(100, 300, 200, 600);
    myGradient.addColorStop(0, 'purple');
    myGradient.addColorStop(2, 'blue');
    myGradient.addColorStop(5, 'red');
    myContext.fillStyle = myGradient;
-   myContext.fillRect(100, 300, 200, 400);
+   myContext.fillRect(100, 300, 200, 600);
    // reset fillstyle
    myContext.fillStyle = 'black';
 }"><br><br>
