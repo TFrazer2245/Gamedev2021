@@ -39,9 +39,9 @@ You use loops and variables to make fast fancy drawings <br><br>
 
 <input type=button value=".createLinearGradient(100, 300, 200, 600)" onclick="{
    let myGradient = myContext.createLinearGradient(100, 300, 200, 600);
-   myGradient.addColorStop(0.5, 'purple');
-   myGradient.addColorStop(1, 'blue');
-   myGradient.addColorStop(3, 'red');
+   myGradient.addColorStop(0, 'purple');
+   myGradient.addColorStop(0.5, 'blue');
+   myGradient.addColorStop(1, 'red');
    myContext.fillStyle = myGradient;
    myContext.fillRect(100, 300, 200, 600);
    // reset fillstyle
