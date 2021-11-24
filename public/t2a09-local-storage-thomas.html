@@ -23,14 +23,14 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
    document.getElementById('myText1').value = localStorage.getItem('myStoredText')
 }"> <br><br>
 
-   <input id="myText1" type=text size=70 value="" placeholder="Type your name here"><br>
+   <input id="myText2" type=text size=70 value="" placeholder="Type your name here"><br>
 
 <input type="button" value="Store Text" onClick="{
-   localStorage.setItem('myStoredText', document.getElementById('myText1').value)
-   alert(document.getElementById('myText1').value + ' \nHas been stored')
-   document.getElementById('myText1').value = ''
+   localStorage.setItem('myStoredText', document.getElementById('myText2').value)
+   alert(document.getElementById('myText2').value + ' \nHas been stored')
+   document.getElementById('myText2').value = ''
 }">
 
 <input type="button" value="Retrieve Text" onClick="{
-   document.getElementById('myText1').value = localStorage.getItem('myStoredText')
+   document.getElementById('myText2').value = localStorage.getItem('myStoredText')
 }"> 
