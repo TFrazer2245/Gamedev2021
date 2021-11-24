@@ -3,6 +3,7 @@
 <script>
    let myGlobalX = 0
    let myClock
+   let mySpeed01 = 400
 </script>
 
 <input id="myButton01" type=button value="background move left" onclick="{
@@ -16,7 +17,7 @@
   clearInterval(myClock)
   myClock = setInterval(function(){
      document.getElementById('myButton01').click() 
-  }, 100)
+  }, mySpeed01)
     
 }">
 
