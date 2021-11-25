@@ -23,6 +23,19 @@ Text example: <input id="myText1" type=text size=70 value="" placeholder="Write 
    document.getElementById('myText1').value = localStorage.getItem('myStoredText')
 }"> <br><br>
 
+
+   <body onload="{
+   myStorage = localStorage.getItem('myStoredText2')
+   if(myStorage  != null){
+      document.getElementById('myText2').value = myStorage 
+    }
+}">
+
+<body onunload="{
+   localstorage.setItem('myStoredText2',document.getElementById('myText2').value)
+}">   
+   
+   
    <input id="myText2" type=text size=70 value="" placeholder="Type your name here"><br>
 
 <input type="button" value="Store Text" onClick="{
