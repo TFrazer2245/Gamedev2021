@@ -22,6 +22,9 @@ function myIsOnScreen(){
       } ,20)
    }
 }">
+   
+   
+
 
 <h1 align=center>t1a13-onkeydown-fred</h1>
 Get WASD working, what about a second object controlled by arrows or IJKL<br>
@@ -29,3 +32,30 @@ Get WASD working, what about a second object controlled by arrows or IJKL<br>
 <div id="myDiv01" style="position:absolute; left:200; top:200; " >Fred</div>
 
 </body>
+
+
+<script>
+   let myInterval
+ 
+function myIsOnScreen(){
+   if (parseInt(document.getElementById('myDiv01').style.right) > 400) {
+     document.getElementById('myDiv01').style.right = '397px'
+   }
+}
+
+</script>
+
+<body onkeydown="{
+     let myKey = event.key
+ //  let myKey = String.toLowerCase(event.key)
+   if (myKey == 'a') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv01').style.right = 
+             parseInt(document.getElementById('myDiv01').style.right) + 3
+         myIsOnScreen()
+      } ,20)
+   }
+}">
+   </body>
