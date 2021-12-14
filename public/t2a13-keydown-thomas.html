@@ -1,4 +1,4 @@
-Version 0.0.3
+Version 0.0.4
 <script>
    let myInterval
  
@@ -22,6 +22,17 @@ function myIsOnScreen(){
          myIsOnScreen()
       } ,20)
    }
+       let myKey02 = event.key
+ //  let myKey02 = String.toLowerCase(event.key)
+   if (myKey02 == 'a') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv01').style.right = 
+             parseInt(document.getElementById('myDiv01').style.right) + 3
+         myIsOnScreen()
+      } ,20)
+   }              
 }">
    
    
