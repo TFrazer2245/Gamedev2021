@@ -1,4 +1,4 @@
-Version 0.0.4
+Version 0.0.5
 <script>
    let myInterval
  
@@ -28,8 +28,8 @@ function myIsOnScreen(){
       clearInterval(myInterval)
       myInterval = setInterval(function(){
    
-         document.getElementById('myDiv01').style.right = 
-             parseInt(document.getElementById('myDiv01').style.right) + 3
+         document.getElementById('myDiv01').style.left = 
+             parseInt(document.getElementById('myDiv01').style.left) - 3
          myIsOnScreen()
       } ,20)
    }              
