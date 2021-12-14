@@ -1,4 +1,4 @@
-Version 0.0.5
+Version 0.0.6
 <script>
    let myInterval
  
@@ -32,7 +32,18 @@ function myIsOnScreen(){
              parseInt(document.getElementById('myDiv01').style.left) - 3
          myIsOnScreen()
       } ,20)
-   }              
+   }      
+         let myKey03 = event.key
+ //  let myKey03 = String.toLowerCase(event.key)
+   if (myKey == 'w') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myDiv01').style.up = 
+             parseInt(document.getElementById('myDiv01').style.up) + 3
+         myIsOnScreen()
+      } ,20)
+   }            
 }">
    
    
@@ -41,7 +52,7 @@ function myIsOnScreen(){
 <h1 align=center>t1a13-onkeydown-fred</h1>
 Get WASD working, what about a second object controlled by arrows or IJKL<br>
 
-<div id="myDiv01" style="position:absolute; left:200; top:200; " >Fred</div>
+<div id="myDiv01" style="position:absolute; left:200; top:200; " >Object</div>
 
 </body>
 
