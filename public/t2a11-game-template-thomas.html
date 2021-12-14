@@ -62,7 +62,62 @@ function myCheckHit(){
 }">
 
 
-<input type=button value="Image Right Fast Button onTouchStart"="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-  myCheckHit()     // checks for all collisions
-}"><br><br>
+<script>
+   let myInterval
+ 
+function myIsOnScreen(){
+   if (parseInt(document.getElementById('myImg01').style.left) > 400) {
+     document.getElementById('myImg01').style.left = '397px'
+   }
+}
+
+</script>
+
+<body onkeydown="{
+     let myKey = event.key
+ //  let myKey = String.toLowerCase(event.key)
+   if (myKey == 'd') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.left = 
+             parseInt(document.getElementById('myImg01').style.left) + 3
+         myIsOnScreen()
+      } ,20)
+   }
+       let myKey02 = event.key
+ //  let myKey02 = String.toLowerCase(event.key)
+   if (myKey02 == 'a') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.left = 
+             parseInt(document.getElementById('myImg01').style.left) - 3
+         myIsOnScreen()
+      } ,20)
+   }      
+         let myKey03 = event.key
+ //  let myKey03 = String.toLowerCase(event.key)
+   if (myKey == 'w') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.top = 
+             parseInt(document.getElementById('myImg01').style.top) - 3
+         myIsOnScreen()
+      } ,20)
+   }    
+       let myKey04 = event.key
+ //  let myKey04 = String.toLowerCase(event.key)
+   if (myKey == 's') {
+      clearInterval(myInterval)
+      myInterval = setInterval(function(){
+   
+         document.getElementById('myImg01').style.top = 
+             parseInt(document.getElementById('myImg01').style.top) + 3
+         myIsOnScreen()
+      } ,20)
+   }              
+}">
+   
+   </body>
