@@ -1,5 +1,5 @@
 <body id="myBody" style="background-repeat:repeat; background-size: 900%" background="">
-version 0.1.8
+version 0.1.9
 <h1 align=center>t2a11 Game Template by Fred</h1>
 <br><br><br><br>
 
@@ -166,25 +166,59 @@ function myIsOnScreen(){
    
    </body>
 
+<div class='a'></div>
+   
+  div.a {
+width: 50px;
+height:50px;
+ background-color:red;
+position:fixed;
+    
+}
+   
+   $(document).ready(function(){
+    animateDiv();
+    
+});
 
+function makeNewPosition(){
+    
+    // Get viewport dimensions (remove the dimension of the div)
+    var h = $(window).height() - 50;
+    var w = $(window).width() - 50;
+    
+    var nh = Math.floor(Math.random() * h);
+    var nw = Math.floor(Math.random() * w);
+    
+    return [nh,nw];    
+    
+}
 
-<html>
+function animateDiv(){
+    var newq = makeNewPosition();
+    var oldq = $('.a').offset();
+    var speed = calcSpeed([oldq.top, oldq.left], newq);
+    
+    $('.a').animate({ top: newq[0], left: newq[1] }, speed, function(){
+      animateDiv();        
+    });
+    
+};
 
-<script type="text/javascript">
+function calcSpeed(prev, next) {
+    
+    var x = Math.abs(prev[1] - next[1]);
+    var y = Math.abs(prev[0] - next[0]);
+    
+    var greatest = x > y ? x : y;
+    
+    var speedModifier = 0.1;
 
-function changeImg()
-{
-var x = Math.floor(Math.random()*300);
-var y = Math.floor(Math.random()*300);
+    var speed = Math.ceil(greatest/speedModifier);
 
+    return speed;
 
-var obj = document.getElementById("myImg02");
-
-obj.style.top = x + "px";
-obj.style.left = y + "px";
-
-
- }
-
-</script>
-   </html>
+}
+   
+   
+   
